@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om Prakash | Senior Computer Operator & Operations Executive</title>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #1e3a8a;
+      --accent: #2563eb;
+      --accent-light: #eff6ff;
+      --text-dark: #1e293b;
+      --text-muted: #475569;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    /* Header Banner */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: #ffffff;
+      padding: 50px 20px 40px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    header .subtitle {
+      font-size: 1.25rem;
+      color: #93c5fd;
+      font-weight: 500;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .contact-badge {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(5px);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.92rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Container Layout */
+    .container {
+      max-width: 1050px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: var(--card-bg);
+      padding: 32px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+      border: 1px solid var(--border);
+    }
+
+    h2 {
+      color: var(--primary);
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 8px;
+      margin-bottom: 22px;
+      font-size: 1.45rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* About Section Grid */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 25px;
+    }
+
+    .about-text {
+      font-size: 1rem;
+      color: var(--text-muted);
+      text-align: justify;
+    }
+
+    .quick-stats {
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      padding: 18px;
+      border-radius: 6px;
+    }
+
+    .stat-item {
+      margin-bottom: 12px;
+    }
+    .stat-item:last-child { margin-bottom: 0; }
+    
+    .stat-label {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      color: var(--secondary);
+      font-weight: 700;
+    }
+
+    .stat-val {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* Experience Items */
+    .exp-item {
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .exp-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+
+    .role-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .role-date {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #dc2626;
+      background: #fef2f2;
+      padding: 2px 10px;
+      border-radius: 12px;
+      border: 1px solid #fecaca;
+    }
+
+    .company-name {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.98rem;
+      margin-bottom: 10px;
+    }
+
+    ul.bullet-list {
+      margin-left: 20px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    ul.bullet-list li {
+      margin-bottom: 6px;
+    }
+
+    /* Value Addition Banner */
+    .value-box {
+      background: linear-gradient(to right, #f0fdf4, #ecfdf5);
+      border-left: 5px solid #10b981;
+      padding: 20px;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    .value-title {
+      font-weight: 700;
+      color: #065f46;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--accent);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+
+    .skill-card h3 {
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: var(--accent-light);
+      color: var(--secondary);
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* Education Cards */
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .edu-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 18px;
+      border-radius: 8px;
+    }
+
+    .edu-degree {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .edu-field {
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .edu-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Language & Personal Info */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .info-box {
+      background: var(--bg);
+      padding: 18px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .info-box h3 {
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+      background: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .info-grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Banner -->
+  <header>
+    <h1>Om Prakash</h1>
+    <div class="subtitle">Senior Computer Operator | Billing & Operations Executive</div>
+    <div class="contact-container">
+      <div class="contact-badge">📱 Mobile: +91 9413107631</div>
+      <div class="contact-badge">✉️ Email: itsuniqueop@gmail.com</div>
+      <div class="contact-badge">📍 Location: Kuchaman City, Rajasthan</div>
+      <div class="contact-badge">💼 Experience: 11+ Years</div>
+    </div>
+  </header>
+
+  <div class="container">
+    
+    <!-- Professional Profile / About Me -->
+    <section>
+      <h2>About Me / Profile Overview</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          Post-graduate (M.Com in Business Administration) Senior Computer Operator with 11+ years of overall multi-disciplinary experience, including specialized contractual service at UCO Bank. 
+          <br><br>
+          Demonstrated track record in managing core banking documentation, loan file verifications, advanced MS Excel reporting, error-free billing, and inventory tracking. Additionally skilled in Adobe Photoshop for creating in-house marketing banners, flex designs, and promotional social media content.
+        </div>
+        <div class="quick-stats">
+          <div class="stat-item">
+            <div class="stat-label">Total Experience</div>
+            <div class="stat-val">11+ Years</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Highest Qualification</div>
+            <div class="stat-val">M.Com (Business Admin)</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Banking Tenure</div>
+            <div class="stat-val">UCO Bank (2025-2026)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section>
+      <h2>Professional Experience</h2>
+      
+      <!-- UCO Bank -->
+      <div class="exp-item">
+        <div class="role-header">
+          <div class="role-title">Computer Operator & Operations Executive</div>
+          <div class="role-date">Feb 2025 – Jan 2026</div>
+        </div>
+        <div class="company-name">UCO Bank (Contractual Tenure)</div>
+        <ul class="bullet-list">
+          <li>Managed daily banking system entries, account verification, and customer documentation with complete accuracy.</li>
+          <li>Processed loan files, customer finance paperwork, and daily transaction records under strict data security protocols.</li>
+          <li>Handled cash ledger entry, draft processing, daily reconciliation, and systematic billing/file archiving.</li>
+        </ul>
+      </div>
+
+      <!-- Commercial Experience -->
+      <div class="exp-item">
+        <div class="role-header">
+          <div class="role-title">Senior Data & Graphic Operations Specialist</div>
+          <div class="role-date">11+ Years Experience</div>
+        </div>
+        <div class="company-name">Commercial Enterprises & Client Services</div>
+        <ul class="bullet-list">
+          <li>Executed complex data processing, inventory tracking in MS Excel, and daily billing operations.</li>
+          <li>Designed high-impact promotional banners, flex printing designs, visiting cards, and digital graphics using Adobe Photoshop.</li>
+          <li>Maintained error-free billing registers and delivered reliable administrative support for local commercial units.</li>
+        </ul>
+      </div>
+
+      <!-- Value Addition for Automobile / Showroom Roles -->
+      <div class="value-box">
+        <div class="value-title">Key Strategic Advantages I Bring:</div>
+        <ul class="bullet-list" style="color: #064e3b;">
+          <li><b>Commerce & Administration Edge (M.Com):</b> Strong grasp of taxation, accounts, invoice audit, and operational management.</li>
+          <li><b>Vehicle Finance Support:</b> Direct UCO Bank background speeds up customer car loan documentation and bank draft processing.</li>
+          <li><b>In-House Graphic Designing:</b> Ability to design scheme posters in Adobe Photoshop, eliminating external marketing agency costs.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Technical & Core Skills -->
+    <section>
+      <h2>Core Competencies & Skills</h2>
+      <div class="skills-grid">
+        
+        <div class="skill-card">
+          <h3>Office & Data Operations</h3>
+          <div class="skill-tags">
+            <span class="tag">Advanced MS Excel</span>
+            <span class="tag">VLOOKUP & Pivot Tables</span>
+            <span class="tag">Billing & Invoicing</span>
+            <span class="tag">Fast Data Entry</span>
+            <span class="tag">ERP / DMS Navigation</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Banking & Finance</h3>
+          <div class="skill-tags">
+            <span class="tag">Loan File Verification</span>
+            <span class="tag">Car Loan Paperwork</span>
+            <span class="tag">Customer Documentation</span>
+            <span class="tag">Cash Ledger Reconciliation</span>
+            <span class="tag">Bank Draft Processing</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Creative & Digital</h3>
+          <div class="skill-tags">
+            <span class="tag">Adobe Photoshop (Advanced)</span>
+            <span class="tag">Promotional Banners</span>
+            <span class="tag">Flex Board Designing</span>
+            <span class="tag">Social Media Creatives</span>
+            <span class="tag">Branding Assets</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education & Qualifications -->
+    <section>
+      <h2>Education & Academic Credentials</h2>
+      <div class="edu-grid">
+        
+        <div class="edu-card">
+          <div class="edu-degree">Master of Commerce (M.Com)</div>
+          <div class="edu-field">Specialization in Business Administration</div>
+          <div class="edu-desc">Focused on Business Management, Organizational Workflows, Commercial Administration, and Finance.</div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-degree">Bachelor of Commerce (B.Com)</div>
+          <div class="edu-field">Business Management & Accounting</div>
+          <div class="edu-desc">Built a solid foundation in accounting principles, financial management, and business operations.</div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-degree">Senior Secondary (12th) & 10th</div>
+          <div class="edu-field">State Board Examination, Rajasthan</div>
+          <div class="edu-desc">Completed schooling with strong focus on Commerce stream subjects.</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Languages & Personal Strengths -->
+    <section>
+      <h2>Languages & Work Strengths</h2>
+      <div class="info-grid">
+        
+        <div class="info-box">
+          <h3>🌐 Language Proficiency</h3>
+          <ul class="bullet-list">
+            <li><b>Hindi:</b> Native / Full Professional Fluency</li>
+            <li><b>English:</b> Professional Working Proficiency (Strong Reading & Writing for Software/Billing)</li>
+          </ul>
+        </div>
+
+        <div class="info-box">
+          <h3>⚡ Key Professional Strengths</h3>
+          <ul class="bullet-list">
+            <li><b>Zero-Training Readiness:</b> Instant takeover of billing, DMS, and back-office operations.</li>
+            <li><b>High Accuracy:</b> Error-free ledger entry and precise documentation handling.</li>
+            <li><b>Multi-Tasking:</b> Efficient in balancing admin data tasks and creative design work.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© Om Prakash — Senior Computer Operator & Billing Operations Specialist | Mobile: +91 9413107631</p>
+  </footer>
+
+</body>
+</html>
